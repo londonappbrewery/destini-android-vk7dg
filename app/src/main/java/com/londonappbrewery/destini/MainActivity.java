@@ -46,11 +46,10 @@ public class MainActivity extends AppCompatActivity {
                 case 3:
                     storyTextview.setText(R.string.T6_End);
                     playPosition = 6;
-                    Toast.makeText(getApplicationContext(), "You reached the end Press a button !!", Toast.LENGTH_SHORT).show();
+                    topButton.setVisibility(view.GONE);
+                    botButton.setVisibility(view.GONE);
                 break;
-                case 6:
-                    finish();
-                break;
+
             }
             }
         });
@@ -70,18 +69,15 @@ public class MainActivity extends AppCompatActivity {
                         topButton.setText(R.string.T3_Ans1);
                         botButton.setText(R.string.T3_Ans2);
                         playPosition = 4;
-                        Toast.makeText(getApplicationContext(), "You reached the end Press a button !!", Toast.LENGTH_SHORT).show();
-                        break;
-                    case 4:
-                        finish();
-                        break;
+                        topButton.setVisibility(view.GONE);
+                        botButton.setVisibility(view.GONE);
+
                     case 3:
                         storyTextview.setText(R.string.T5_End);
-                        playPosition = 6;
-                        Toast.makeText(getApplicationContext(), "You reached the end Press a button !!", Toast.LENGTH_SHORT).show();
+                        topButton.setVisibility(view.GONE);
+                        botButton.setVisibility(view.GONE);
                         break;
-                    case 6:
-                        finish();
+
                 }
 
             }
